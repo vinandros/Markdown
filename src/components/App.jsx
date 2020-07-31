@@ -1,13 +1,14 @@
 import React from "react";
+import Editor from "./Editor.jsx";
+import Previewer from "./Previewer.jsx";
 
 class App extends React.Component{
-    // constructor(props){
-    //     super(props)
-    // }
-
     render(){
         return ( 
-            <h1>Hi React </h1>
+            <div>
+                <Editor />
+                <Previewer />
+            </div>
         );
     };
 }
