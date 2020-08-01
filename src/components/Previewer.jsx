@@ -1,23 +1,16 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import marked from 'marked';
 
 export class Previewer extends Component {
+
     render() {
+        let { text } = this.props;
+        let markedText = marked(text);
+        
         return (
-            <div>
-                <h2>Previewer</h2>
-                <p>hi</p>
-            </div>
+            <div id="preview" dangerouslySetInnerHTML={{ __html: markedText }} />
         )
     }
 }
 
-const mapStateToProps = (state) => ({
-    
-})
-
-const mapDispatchToProps = {
-    
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Previewer)
+export default Previewer;
