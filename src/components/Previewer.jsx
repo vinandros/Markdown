@@ -8,7 +8,10 @@ export class Previewer extends Component {
         let markedText = marked(text);
         
         return (
-            <div id="preview" dangerouslySetInnerHTML={{ __html: markedText }} />
+            <div id="previewWindows">
+                <h4>&nbsp;Preview</h4>
+                <div id="preview" dangerouslySetInnerHTML={{ __html: markedText }} />
+            </div>
         )
     }
 }

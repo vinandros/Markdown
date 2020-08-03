@@ -23,7 +23,7 @@ class App extends React.Component{
 
     render(){
         return ( 
-            <div>
+            <div id="container">
                 <Editor onChange={this.onChange} value={this.state.text} />
                 <Previewer text={this.state.text} />
             </div>
